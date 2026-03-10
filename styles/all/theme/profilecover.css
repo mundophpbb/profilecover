@@ -1,0 +1,235 @@
+.profilecover-header {
+    position: relative;
+    margin: 0 0 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #dfe7ef;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.profilecover-header--default {
+    background-image: linear-gradient(135deg, #516b85 0%, #8aa5bf 100%);
+}
+
+.profilecover-header__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.60) 100%);
+}
+
+.profilecover-header__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+    height: 100%;
+    padding: 22px 24px;
+    box-sizing: border-box;
+}
+
+.profilecover-header__avatar {
+    flex: 0 0 auto;
+}
+
+.profilecover-header__avatar img {
+    display: block;
+    max-width: 120px;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.profilecover-header__content {
+    min-width: 0;
+}
+
+.profilecover-header__title {
+    margin: 0 0 6px;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1.2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+.profilecover-header__title a,
+.profilecover-header__title span {
+    color: inherit !important;
+    text-decoration: none;
+}
+
+.profilecover-header__online {
+    margin: 0 0 6px;
+    color: #d8ffd8;
+    font-weight: 600;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+}
+
+.profilecover-header__rank {
+    margin: 0;
+    color: #fff;
+    opacity: 0.95;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+}
+
+.profilecover-header__rank-image {
+    margin-top: 8px;
+}
+
+.profilecover-header__rank-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.profilecover-header__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.profilecover-header__button {
+    display: inline-block;
+    color: #FF0000;
+}
+
+#viewprofile > .panel.bg1 {
+    display: none !important;
+}
+
+.profilecover-upload {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.profilecover-upload__input {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.profilecover-upload__button {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.profilecover-upload__filename {
+    display: inline-block;
+    min-height: 1.2em;
+}
+
+.profilecover-editor-wrap {
+    margin-top: 12px;
+}
+
+.profilecover-editor-wrap--hidden {
+    display: none;
+}
+
+.profilecover-editor__help {
+    margin: 0 0 8px;
+}
+
+.profilecover-editor {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 16 / 6;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #dfe7ef;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+}
+
+.profilecover-editor.is-dragging {
+    cursor: grabbing;
+}
+
+.profilecover-editor__crosshair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    transform: translate(-50%, -50%);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+}
+
+.profilecover-editor__crosshair::before,
+.profilecover-editor__crosshair::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    opacity: 0.9;
+}
+
+.profilecover-editor__crosshair::before {
+    top: 50%;
+    left: -10px;
+    right: -10px;
+    height: 2px;
+    transform: translateY(-50%);
+}
+
+.profilecover-editor__crosshair::after {
+    left: 50%;
+    top: -10px;
+    bottom: -10px;
+    width: 2px;
+    transform: translateX(-50%);
+}
+
+.profilecover-ucp-preview-meta {
+    margin-top: 12px;
+}
+
+.profilecover-ucp-thumb {
+    display: block;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.profilecover-ucp-delete {
+    display: inline-block;
+}
+
+@media (max-width: 700px) {
+    .profilecover-header__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    .profilecover-header__avatar img {
+        max-width: 96px;
+        max-height: 96px;
+    }
+
+    .profilecover-header__title {
+        font-size: 1.5rem;
+    }
+}

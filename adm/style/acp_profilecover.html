@@ -1,0 +1,55 @@
+<!-- INCLUDE overall_header.html -->
+
+<a id="maincontent"></a>
+
+<h1>{L_ACP_PROFILECOVER_SETTINGS}</h1>
+<p>{L_ACP_PROFILECOVER_SETTINGS_EXPLAIN}</p>
+
+<!-- IF S_ERROR -->
+<div class="errorbox">
+    <h3>{L_WARNING}</h3>
+    <p>{ERROR_MSG}</p>
+</div>
+<!-- ENDIF -->
+
+<form id="acp_profilecover" method="post" action="{U_ACTION}">
+    <fieldset>
+        <legend>{L_ACP_PROFILECOVER_SETTINGS}</legend>
+        <dl>
+            <dt>
+                <label for="profilecover_max_width">{L_ACP_PROFILECOVER_MAX_WIDTH}{L_COLON}</label><br>
+                <span>{L_ACP_PROFILECOVER_MAX_WIDTH_EXPLAIN}</span>
+            </dt>
+            <dd><input type="number" min="1" id="profilecover_max_width" name="profilecover_max_width" value="{PROFILECOVER_MAX_WIDTH}"></dd>
+        </dl>
+        <dl>
+            <dt>
+                <label for="profilecover_max_height">{L_ACP_PROFILECOVER_MAX_HEIGHT}{L_COLON}</label><br>
+                <span>{L_ACP_PROFILECOVER_MAX_HEIGHT_EXPLAIN}</span>
+            </dt>
+            <dd><input type="number" min="1" id="profilecover_max_height" name="profilecover_max_height" value="{PROFILECOVER_MAX_HEIGHT}"></dd>
+        </dl>
+        <dl>
+            <dt>
+                <label for="profilecover_header_height">{L_ACP_PROFILECOVER_HEADER_HEIGHT}{L_COLON}</label><br>
+                <span>{L_ACP_PROFILECOVER_HEADER_HEIGHT_EXPLAIN}</span>
+            </dt>
+            <dd><input type="number" min="1" id="profilecover_header_height" name="profilecover_header_height" value="{PROFILECOVER_HEADER_HEIGHT}"></dd>
+        </dl>
+        <dl>
+            <dt>
+                <label for="profilecover_max_filesize">{L_ACP_PROFILECOVER_MAX_FILESIZE}{L_COLON}</label><br>
+                <span>{L_ACP_PROFILECOVER_MAX_FILESIZE_EXPLAIN}</span>
+            </dt>
+            <dd><input type="number" min="1" id="profilecover_max_filesize" name="profilecover_max_filesize" value="{PROFILECOVER_MAX_FILESIZE}"></dd>
+        </dl>
+    </fieldset>
+
+    <fieldset class="submit-buttons">
+        <legend>{L_SUBMIT}</legend>
+        <input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}">
+        {S_FORM_TOKEN}
+    </fieldset>
+</form>
+
+<!-- INCLUDE overall_footer.html -->

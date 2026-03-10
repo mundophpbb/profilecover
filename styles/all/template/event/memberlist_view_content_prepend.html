@@ -1,0 +1,52 @@
+<link href="{PROFILECOVER_THEME_PATH}/profilecover.css?v={PROFILECOVER_ASSET_VERSION}" rel="stylesheet" type="text/css" media="screen" />
+
+<div class="profilecover-header<!-- IF not S_PROFILE_COVER_EXISTS --> profilecover-header--default<!-- ENDIF -->"
+    <!-- IF S_PROFILE_COVER_EXISTS -->
+        style="background-image: url('{PROFILE_COVER_SRC}'); background-position: {PROFILE_COVER_POS_X}% {PROFILE_COVER_POS_Y}%; height: <!-- IF PROFILE_COVER_HEADER_HEIGHT -->{PROFILE_COVER_HEADER_HEIGHT}<!-- ELSE -->300<!-- ENDIF -->px;"
+    <!-- ELSE -->
+        style="height: <!-- IF PROFILE_COVER_HEADER_HEIGHT -->{PROFILE_COVER_HEADER_HEIGHT}<!-- ELSE -->300<!-- ENDIF -->px;"
+    <!-- ENDIF --> >
+
+    <div class="profilecover-header__overlay"></div>
+
+    <div class="profilecover-header__inner">
+        <div class="profilecover-header__avatar">
+            <!-- IF AVATAR_IMG -->
+                {AVATAR_IMG}
+            <!-- ENDIF -->
+        </div>
+
+        <div class="profilecover-header__content">
+            <h1 class="profilecover-header__title"><span>{USERNAME_FULL}</span></h1>
+
+            <!-- IF S_ONLINE -->
+                <p class="profilecover-header__online">{L_ONLINE}</p>
+            <!-- ENDIF -->
+
+            <!-- IF RANK_TITLE -->
+                <p class="profilecover-header__rank">{RANK_TITLE}</p>
+            <!-- ENDIF -->
+
+            <!-- IF RANK_IMG -->
+                <div class="profilecover-header__rank-image">{RANK_IMG}</div>
+            <!-- ENDIF -->
+
+            <!-- IF U_EDIT_SELF or U_USER_ADMIN or U_USER_BAN or U_SWITCH_PERMISSIONS -->
+                <div class="profilecover-header__actions">
+                    <!-- IF U_EDIT_SELF -->
+                        <a href="{U_EDIT_SELF}" class="button button-secondary profilecover-header__button">{L_EDIT_PROFILE}</a>
+                    <!-- ENDIF -->
+                    <!-- IF U_USER_ADMIN -->
+                        <a href="{U_USER_ADMIN}" class="button button-secondary profilecover-header__button">{L_USER_ADMIN}</a>
+                    <!-- ENDIF -->
+                    <!-- IF U_USER_BAN -->
+                        <a href="{U_USER_BAN}" class="button button-secondary profilecover-header__button">{L_USER_BAN}</a>
+                    <!-- ENDIF -->
+                    <!-- IF U_SWITCH_PERMISSIONS -->
+                        <a href="{U_SWITCH_PERMISSIONS}" class="button button-secondary profilecover-header__button">{L_USE_PERMISSIONS}</a>
+                    <!-- ENDIF -->
+                </div>
+            <!-- ENDIF -->
+        </div>
+    </div>
+</div>
