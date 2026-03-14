@@ -17,35 +17,10 @@
         </div>
 
         <div class="profilecover-header__content">
-            <h1 class="profilecover-header__title"><span>{USERNAME_FULL}</span></h1>
 
-            <!-- IF S_ONLINE -->
-                <p class="profilecover-header__online">{L_ONLINE}</p>
-            <!-- ENDIF -->
-
-            <!-- IF RANK_TITLE -->
-                <p class="profilecover-header__rank">{RANK_TITLE}</p>
-            <!-- ENDIF -->
-
-            <!-- IF RANK_IMG -->
-                <div class="profilecover-header__rank-image">{RANK_IMG}</div>
-            <!-- ENDIF -->
 
             <!-- IF U_EDIT_SELF or U_USER_ADMIN or U_USER_BAN or U_SWITCH_PERMISSIONS -->
-                <div class="profilecover-header__actions">
-                    <!-- IF U_EDIT_SELF -->
-                        <a href="{U_EDIT_SELF}" class="button button-secondary profilecover-header__button">{L_EDIT_PROFILE}</a>
-                    <!-- ENDIF -->
-                    <!-- IF U_USER_ADMIN -->
-                        <a href="{U_USER_ADMIN}" class="button button-secondary profilecover-header__button">{L_USER_ADMIN}</a>
-                    <!-- ENDIF -->
-                    <!-- IF U_USER_BAN -->
-                        <a href="{U_USER_BAN}" class="button button-secondary profilecover-header__button">{L_USER_BAN}</a>
-                    <!-- ENDIF -->
-                    <!-- IF U_SWITCH_PERMISSIONS -->
-                        <a href="{U_SWITCH_PERMISSIONS}" class="button button-secondary profilecover-header__button">{L_USE_PERMISSIONS}</a>
-                    <!-- ENDIF -->
-                </div>
+
             <!-- ENDIF -->
         </div>
     </div>
