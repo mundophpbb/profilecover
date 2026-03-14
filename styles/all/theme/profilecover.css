@@ -102,8 +102,20 @@
     color: #FF0000;
 }
 
+/* Exibe novamente o painel nativo do perfil */
 #viewprofile > .panel.bg1 {
+    display: block !important;
+}
+
+/* Oculta somente o avatar nativo do perfil */
+#viewprofile .profile-avatar {
     display: none !important;
+}
+
+/* Pequeno ajuste visual opcional */
+#viewprofile .avatar-rank-container,
+#viewprofile .left-box {
+    margin-bottom: 0;
 }
 
 .profilecover-upload {
