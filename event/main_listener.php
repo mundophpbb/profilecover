@@ -14,7 +14,7 @@ class main_listener implements EventSubscriberInterface
     const DEFAULT_FOCAL_POS = 50;
     const THUMB_WIDTH = 320;
     const THUMB_HEIGHT = 120;
-    const ASSET_VERSION = '1.3.0';
+    const ASSET_VERSION = '1.3.1';
 
     /** @var \phpbb\config\config */
     protected $config;
