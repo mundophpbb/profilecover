@@ -1,0 +1,59 @@
+<link href="{PROFILECOVER_THEME_PATH}/profilecover.css?v={PROFILECOVER_ASSET_VERSION}" rel="stylesheet" type="text/css" media="screen" />
+<script src="{PROFILECOVER_TEMPLATE_PATH}/profilecover_ucp.js?v={PROFILECOVER_ASSET_VERSION}"></script>
+
+<dl>
+    <dt>
+        <label for="profile_cover">{L_PROFILE_COVER}{L_COLON}</label><br />
+        <span>{L_PROFILE_COVER_EXPLAIN}<br />{PROFILE_COVER_CONSTRAINTS}</span>
+    </dt>
+    <dd>
+        <div class="profilecover-upload profilecover-upload--acp">
+            <input
+                type="file"
+                name="profile_cover"
+                id="profile_cover"
+                class="profilecover-upload__input profilecover-upload__input--acp"
+                accept=".jpg,.jpeg,.png,.gif,.webp,image/jpeg,image/png,image/gif,image/webp"
+            />
+            <div class="profilecover-upload__filename-wrap">
+                <span class="profilecover-upload__filename-label">{L_FILENAME}{L_COLON}</span>
+                <span
+                    id="profilecover-file-name"
+                    class="profilecover-upload__filename"
+                    data-empty-text="{L_PROFILE_COVER_NO_FILE_SELECTED}"
+                >{L_PROFILE_COVER_NO_FILE_SELECTED}</span>
+            </div>
+        </div>
+
+        <input type="hidden" name="profile_cover_pos_x" id="profile_cover_pos_x" value="{PROFILE_COVER_POS_X}" />
+        <input type="hidden" name="profile_cover_pos_y" id="profile_cover_pos_y" value="{PROFILE_COVER_POS_Y}" />
+
+        <div id="profilecover-editor-wrap" class="profilecover-editor-wrap<!-- IF not S_PROFILE_COVER_EXISTS --> profilecover-editor-wrap--hidden<!-- ENDIF -->">
+            <p class="profilecover-editor__help">{L_PROFILE_COVER_POSITION_HELP}</p>
+            <div
+                id="profilecover-editor"
+                class="profilecover-editor"
+                data-pos-x="{PROFILE_COVER_POS_X}"
+                data-pos-y="{PROFILE_COVER_POS_Y}"
+                <!-- IF S_PROFILE_COVER_EXISTS -->
+                    style="background-image: url('{PROFILE_COVER_SRC}'); background-position: {PROFILE_COVER_POS_X}% {PROFILE_COVER_POS_Y}%;"
+                <!-- ELSE -->
+                    style="background-position: {PROFILE_COVER_POS_X}% {PROFILE_COVER_POS_Y}%;"
+                <!-- ENDIF -->
+            >
+                <span class="profilecover-editor__crosshair"></span>
+            </div>
+        </div>
+
+        <!-- IF S_PROFILE_COVER_EXISTS -->
+        <div class="profilecover-ucp-preview-meta profilecover-ucp-preview-meta--acp">
+            <!-- IF PROFILE_COVER_THUMB_SRC -->
+            <img class="profilecover-ucp-thumb" src="{PROFILE_COVER_THUMB_SRC}" alt="{L_PROFILE_COVER}" />
+            <!-- ENDIF -->
+            <label for="delete_profile_cover" class="profilecover-ucp-delete">
+                <input type="checkbox" name="delete_profile_cover" id="delete_profile_cover" value="1"<!-- IF S_PROFILE_COVER_DELETE_REQUESTED --> checked="checked"<!-- ENDIF --> /> {L_PROFILE_COVER_DELETE}
+            </label>
+        </div>
+        <!-- ENDIF -->
+    </dd>
+</dl>

@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var form = document.getElementById('ucp');
+    var form = document.getElementById('ucp') || document.getElementById('user_profile');
+    var isAcp = !!document.getElementById('user_profile');
     var input = document.getElementById('profile_cover');
     var fileName = document.getElementById('profilecover-file-name');
     var editorWrap = document.getElementById('profilecover-editor-wrap');
@@ -57,6 +58,9 @@ document.addEventListener('DOMContentLoaded', function () {
     applyPosition();
 
     input.addEventListener('change', function () {
+        if (input.closest('.profilecover-upload--acp')) {
+            input.classList.add('profilecover-upload__input--selected');
+        }
         if (objectUrl && window.URL && typeof URL.revokeObjectURL === 'function') {
             URL.revokeObjectURL(objectUrl);
             objectUrl = null;

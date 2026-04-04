@@ -245,3 +245,30 @@
         font-size: 1.5rem;
     }
 }
+.profilecover-upload--acp {
+    display: block;
+    max-width: 520px;
+}
+
+.profilecover-upload__input--acp {
+    position: static;
+    left: auto;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    max-width: 100%;
+    margin: 0 0 6px;
+}
+
+.profilecover-upload__filename-wrap {
+    display: block;
+    margin-top: 2px;
+}
+
+.profilecover-upload__filename-label {
+    font-weight: 600;
+}
+
+.profilecover-ucp-preview-meta--acp .profilecover-ucp-thumb {
+    max-width: 420px;
+}
